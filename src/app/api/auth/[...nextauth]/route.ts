@@ -1,3 +1,4 @@
+import { signIn } from "next-auth/react";
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
@@ -8,6 +9,9 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_OAUTH_SECRET || "",
     }),
   ],
+  pages: {
+    signIn: "/auth/signin",
+  },
 };
 
 const handler = NextAuth(authOptions);
