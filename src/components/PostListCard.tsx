@@ -11,11 +11,11 @@ type Props = {
 };
 
 export default function PostListCard({ post }: Props) {
-  const { username, uesrImage, image, createdAt, likes, text } = post;
+  const { username, userImage, image, createdAt, likes, text } = post;
   return (
     <>
       <div>
-        <Avatar image={uesrImage} highlight />
+        <Avatar image={userImage} highlight />
         <span>{username}</span>
       </div>
       <Image
