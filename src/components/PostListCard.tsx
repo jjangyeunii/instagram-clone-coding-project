@@ -6,6 +6,7 @@ import CommentForm from "./CommentForm";
 import { useState } from "react";
 import ModalPortal from "./ui/ModalPortal";
 import PostModal from "./PostModal";
+import PostDetail from "./PostDetail";
 
 type Props = {
   post: SimplePost;
@@ -27,7 +28,7 @@ export default function PostListCard({ post, priority = false }: Props) {
         alt={`photo by ${username}`}
         width={500}
         height={500}
-        priority
+        priority={priority}
         onClick={() => setOpenModal(true)}
       />
       <ActionBar
@@ -40,7 +41,7 @@ export default function PostListCard({ post, priority = false }: Props) {
       {openModal && (
         <ModalPortal>
           <PostModal onClose={() => setOpenModal(false)}>
-            <p>post detail page!!</p>
+            <PostDetail post={post} />
           </PostModal>
         </ModalPortal>
       )}
