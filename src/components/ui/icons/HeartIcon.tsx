@@ -1,7 +1,7 @@
 import { AiOutlineHeart } from "react-icons/ai";
 
 type Props = {
-  className: string;
+  className?: string;
 };
 
 export default function HeartIcon({ className }: Props) {
