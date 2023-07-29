@@ -17,10 +17,10 @@ export async function GET(_: NextRequest, context: Context) {
   const [username, query] = slug;
 
   let request = getPostsOf;
-  if (query === "liked") {
-    request = getLikedPostsOf;
-  } else if (query === "saved") {
+  if (query === "saved") {
     request = getSavedPostsOf;
+  } else if (query === "liked") {
+    request = getLikedPostsOf;
   }
 
   return request(username).then((data) => NextResponse.json(data));

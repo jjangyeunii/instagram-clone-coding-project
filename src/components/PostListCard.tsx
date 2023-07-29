@@ -1,5 +1,4 @@
 import { SimplePost } from "@/model/post";
-import Avatar from "./Avatar";
 import Image from "next/image";
 import ActionBar from "./ActionBar";
 import CommentForm from "./CommentForm";
