@@ -4,7 +4,7 @@ import PostUserAvatar from "./PostUserAvatar";
 import ActionBar from "./ActionBar";
 import Avatar from "./Avatar";
 import useFullPost from "@/hooks/post";
-import GridSpinner from "./GridSpinner";
+import { SyncLoader } from "react-spinners";
 
 type Props = {
   post: SimplePost;
@@ -32,7 +32,7 @@ export default function PostDetail({ post }: Props) {
         <ul className="border-t border-gray-200 h-full overflow-y-auto p-4 mb-1">
           {loading && (
             <div className="text-center mt-9">
-              <GridSpinner />
+              <SyncLoader color="red" />
             </div>
           )}
           {comments &&
