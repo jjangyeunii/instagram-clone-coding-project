@@ -32,7 +32,7 @@ export default function PostDetail({ post }: Props) {
         <ul className="border-t border-gray-200 h-full overflow-y-auto p-4 mb-1">
           {loading && (
             <div className="text-center mt-9">
-              <SyncLoader color="red" />
+              <SyncLoader color="red" size={10} />
             </div>
           )}
           {comments &&
